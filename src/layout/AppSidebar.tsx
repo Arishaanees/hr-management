@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { Grid3x3, Users, Calendar, BarChart3, Settings } from "lucide-react";
 import { useSidebar } from "../context/SidebarContext";
@@ -26,8 +25,14 @@ export default function AppSidebar() {
     >
       {/* Logo */}
       <div className="flex items-center gap-3 px-3 py-4">
-        <img src="/images/logo/hirezy.svg" className="h-8 w-8" />
-        <span className="text-lg font-semibold text-gray-900 dark:text-white">Hirezy</span>
+        <img
+          src="/logoHire.jpg" // ✅ Public folder ke root se direct
+          alt="Hirezy Logo"
+          className="h-8 w-8 object-contain"
+        />
+        <span className="text-lg font-semibold text-gray-900 dark:text-white">
+          Hirezy
+        </span>
       </div>
 
       {/* Navigation */}
