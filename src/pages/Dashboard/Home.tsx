@@ -6,6 +6,7 @@ import VacancyAndTaskCard from "../../components/ecommerce/VacancyAndTaskCard";
 import RecentActivity from "../../components/ecommerce/RecentActivity";
 import ApplicantList from "../../components/ecommerce/ApplicantList";
 import ScheduleCard from "../../components/ecommerce/ScheduleCard";
+import Applicants from "../../components/ecommerce/Appliacants";
 
 export default function Home() {
   return (
@@ -26,6 +27,9 @@ export default function Home() {
         <Resources />
        < ScheduleCard />
         <RecentActivity />
+        <div className="rounded-2xl border border-gray-800 bg-gray-900 p-6">
+          <Applicants />
+        </div>
       </div>
     </div>
   );

@@ -193,9 +193,9 @@ export default function VacancyTaskSchedule() {
         </div>
 
         {/* APPLICANTS */}
-        <div className="rounded-2xl border border-gray-800 bg-gray-900 p-6">
+        {/* <div className="rounded-2xl border border-gray-800 bg-gray-900 p-6">
           <Applicants />
-        </div>
+        </div> */}
       </div>
     </div>
   );
