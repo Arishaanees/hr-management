@@ -12,21 +12,28 @@ const navItems = [
 ];
 
 export default function AppSidebar() {
-  const { isMobileOpen } = useSidebar();
+  const { isMobileOpen, isExpanded } = useSidebar();
   const location = useLocation();
 
   return (
     <aside
-      className={`fixed inset-y-0 left-0 z-40 mt-14 w-[260px]
-        bg-white border-r border-gray-200 dark:bg-gray-900 dark:border-gray-800 px-4
+      className={`
+        fixed inset-y-0 left-0 z-40 mt-14
+        bg-white border-r border-gray-200 dark:bg-gray-900 dark:border-gray-800
         transition-all duration-300
+        w-[260px]
+
+        /* Mobile */
         ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
-        lg:translate-x-0`}
+
+        /* Desktop */
+        lg:${isExpanded ? "translate-x-0" : "-translate-x-full"}
+      `}
     >
       {/* Logo */}
       <div className="flex items-center gap-3 px-3 py-4">
         <img
-          src="/logoHire.jpg" // ✅ Public folder ke root se direct
+          src="/logoHire.jpg"
           alt="Hirezy Logo"
           className="h-8 w-8 object-contain"
         />
@@ -36,7 +43,7 @@ export default function AppSidebar() {
       </div>
 
       {/* Navigation */}
-      <nav className="mt-4 space-y-1">
+      <nav className="mt-4 space-y-1 px-2">
         {navItems.map((item) => {
           const isActive = location.pathname === item.path;
           return (

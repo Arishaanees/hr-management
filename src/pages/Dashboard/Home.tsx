@@ -27,9 +27,10 @@ export default function Home() {
         <Resources />
        < ScheduleCard />
         <RecentActivity />
-        <div className="rounded-2xl border border-gray-800 bg-gray-900 p-6">
-          <Applicants />
-        </div>
+        {/* <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800"> */}
+         <Applicants />
+          {/* </div> */}
+
       </div>
     </div>
   );
